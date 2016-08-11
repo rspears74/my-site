@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Started</title>
+    <link rel="shortcut icon" href="static/travis/photos/icon.ico" type="image/ico">
+    <link href="static/travis/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt|Trirong" rel="stylesheet">
+    <script src="static/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="static/travis/animations.js"></script>
+    <script type="text/javascript" src="static/travis/main.js"></script>
+</head>
+<body onload="updateClock(); setInterval('updateClock()', 1000); getWeather(); setInterval('getWeather()', 300000)">
+    <div class="header">
+        <div class="container">
+            <h1>Get Started</h1>
+            <p><span id="clock">&nbsp;</span></p>
+            <p><span id="weather">&nbsp;</span></p>
+        </div>
+    </div>
+    <div class="links">
+        <div class="buttons">
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="google1">
+                        <h3>Google</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="social1">
+                        <h3>Social</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="money1">
+                        <h3>Money</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="sports1">
+                        <h3>Sports</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="stuff1">
+                        <h3>Stuff</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="news1">
+                        <h3>News</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="buttoncontainer">
+                <a href="javascript:void(0)">
+                    <div class="button1" id="bills1">
+                        <h3>Bills</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="lists">
+            <div class="list" id="google">
+                <a href="https://inbox.google.com" target="_blank">
+                    <div class="listcontainer" title="Inbox">
+                        <img class="imglink" style="width:100px; height:100px" src="static/travis/photos/inbox.png"
+                            alt="Inbox"/>
+                    </div></a>
+                <a href="https://calendar.google.com/calendar/render#main_7%7Cmonth" target="_blank">
+                    <div class="listcontainer" title="Calendar">
+                        <img class="imglink" style="width:100px; height:100px" src="static/travis/photos/calendar.png"
+                            alt="Calendar"/>
+                    </div></a>
+                <a href="https://drive.google.com/drive/my-drive" target="_blank">
+                    <div class="listcontainer" title="Drive">
+                        <img class="imglink" style="width:100px; height:87px" src="static/travis/photos/drive.png"
+                            alt="Drive"/>
+                    </div></a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <div class="listcontainer" title="YouTube">
+                        <img class="imglink" style="width:100px; height:100px" src="static/travis/photos/youtube.png"
+                            alt="YouTube"/>
+                    </div></a>
+                <a href="https://docs.google.com/spreadsheets/u/0/" target="_blank">
+                    <div class="listcontainer" title="Sheets">
+                        <img class="imglink" style="width: 100px; height: 100px" src="static/travis/photos/sheets.png"
+                            alt="Sheets"/>
+                    </div></a>
+                <a href="https://docs.google.com/document/u/0/" target="_blank">
+                    <div class="listcontainer" title="Docs">
+                        <img class="imglink" style="width:100px; height:100px" src="static/travis/photos/docs.png"
+                            alt="Docs"/>
+                    </div></a>
+                <a href="https://www.google.com/maps" target="_blank">
+                    <div class="listcontainer" title="Maps">
+                        <img class="imglink" style="width:100px; height:100px" src="static/travis/photos/maps.png"
+                            alt="Maps"/>
+                    </div></a>
+                <a href="https://www.google.com/flights" target="_blank">
+                    <div class="listcontainer" title="Flights">
+                        <img class="imglink" style="width:100px; height:100px" src="static/travis/photos/flights.png"
+                            alt="Flights"/>
+                    </div></a>
+                <a href="https://www.google.com" target="_blank">
+                    <div class="listcontainer" title="Search">
+                        <img class="imglink" style="width:140px; height:140px" src="static/travis/photos/google.png"
+                            alt="Search"/>
+                    </div></a>
+            </div>
+            <div class="list" id="social">
+                <a href="https://www.facebook.com" target="_blank">
+                    <div class="listcontainer" title="Facebook">
+                        <img class="imglink" style="width:90px; height:96px" src="static/travis/photos/facebook.gif"
+                            alt="Facebook"/>
+                    </div></a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <div class="listcontainer" title="LinkedIn">
+                        <img class="imglink" style="width:90px; height:90px" src="static/travis/photos/linkedin.png"
+                            alt="LinkedIn"/>
+                    </div></a>
+            </div>
+            <div class="list" id="money">
+                <a href="https://www.wellsfargo.com" target="_blank">
+                    <div class="listcontainer" title="Wells Fargo">
+                        <img class="imglink" style="width: 100px; height: 100px" src="static/travis/photos/wf.png"
+                            alt="Wells Fargo"/>
+                    </div></a>
+                <a href="https://www.plainscapital.com" target="_blank">
+                    <div class="listcontainer" title="Plains Capital">
+                        <img class="imglink" style="width: 100px; height: 58px" src="static/travis/photos/pcb.png"
+                            alt="Plains Capital"/>
+                    </div></a>
+                <a href="https://www.paypal.com" target="_blank">
+                    <div class="listcontainer" title="PayPal">
+                        <img class="imglink" style="width: 100px; height: 66px" src="static/travis/photos/paypal.png"
+                            alt="PayPal"/>
+                    </div></a>
+                <a href="https://invest.ameritrade.com/grid/p/site#r=home" target="_blank">
+                    <div class="listcontainer" title="TD Ameritrade">
+                        <img class="imglink" style="width: 100px; height: 89px" src="static/travis/photos/td.png"
+                            alt="TD Ameritrade"/>
+                    </div></a>
+            </div>
+            <div class="list" id="sports">
+                <a href="http://espn.go.com" target="_blank">
+                    <div class="listcontainer" title="ESPN">
+                        <img class="imglink" style="width:110px; height:110px" src="static/travis/photos/espn.png"
+                            alt="ESPN"/>
+                    </div></a>
+                <a href="http://mlb.mlb.com/home" target="_blank">
+                    <div class="listcontainer" title="MLB.com">
+                        <img class="imglink" style="width:110px; height:110px" src="static/travis/photos/mlb.png"
+                            alt="MLB.com"/>
+                    </div></a>
+                <a href="hhttp://www.baseball-reference.com/" target="_blank">
+                    <div class="listcontainer" title="Baseball Reference">
+                        <img class="imglink" style="width:110px; height:110px" src="static/travis/photos/bballref.png"
+                            alt="Baseball Reference"/>
+                    </div></a>
+            </div>
+            <div class="list" id="stuff">
+                <a href="http://www.pandora.com" target="_blank">
+                    <div class="listcontainer" title="Pandora">
+                        <img class="imglink" style="width:110px; height:110px" src="static/travis/photos/pandora.png"
+                            alt="Pandora"/>
+                    </div></a>
+                <a href="https://www.amazon.com" target="_blank">
+                    <div class="listcontainer" title="Amazon">
+                        <img class="imglink" style="width:100px; height=100px" src="static/travis/photos/amazon.png"
+                            alt="Amazon"/>
+                    </div></a>
+                <a href="https://www.wunderground.com" target="_blank">
+                    <div class="listcontainer" title="Weather Underground">
+                        <img class="imglink" style="width:120px; height:72px" src="static/travis/photos/wunderground.png"
+                            alt="Weather Underground"/>
+                    </div></a>
+                <a href="https://www.dropbox.com" target="_blank">
+                    <div class="listcontainer" title="Dropbox">
+                        <img class="imglink" style="width:100px; height:93px" src="static/travis/photos/dropbox.png"
+                            alt="Dropbox"/>
+                    </div></a>
+                <a href="https://www.codecademy.com" target="_blank">
+                    <div class="listcontainer" title="Codecademy">
+                        <img class="imglink" style="width:90px; height:90px" src="static/travis/photos/codecademy.png"
+                            alt="Codecademy"/>
+                    </div></a>
+                <a href="http://www.ifttt.com" target="_blank">
+                    <div class="listcontainer" title="IFTTT">
+                        <img class="imglink" style="width:110px; height:29px" src="static/travis/photos/ifttt.png"
+                            alt="IFTTT"/>
+                    </div></a>
+            </div>
+            <div class="list" id="news">
+                <a href="http://www.wsj.com" target="_blank">
+                    <div class="listcontainer" title="Wall Street Journal">
+                        <img class="imglink" style="width:100px; height:50px" src="static/travis/photos/wsj.png"
+                            alt="WSJ"/>
+                    </div></a>
+            </div>
+            <div class="list" id="bills">
+                <a href="http://www.suddenlink.net" target="_blank">
+                    <div class="listcontainer" title="Suddenlink">
+                        <img class="imglink" style="width:120px; height:27px" src="static/travis/photos/suddenlink.png"
+                            alt="Suddenlink"/>
+                    </div></a>
+                <a href="http://www.lpandl.com" target="_blank">
+                    <div class="listcontainer" title="LP&L">
+                        <img class="imglink" style="width:110px; height:110px" src="static/travis/photos/lpl.png"
+                            alt="LP&L"/>
+                    </div></a>
+                <a href="https://www.atmosenergy.com" target="_blank">
+                    <div class="listcontainer" title="Atmos">
+                        <img class="imglink" style="width:120px; height:54px" src="static/travis/photos/atmos.png"
+                            alt="Atmos"/>
+                    </div></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
