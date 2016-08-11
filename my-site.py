@@ -35,7 +35,7 @@ def lights_off(on_off):
     return render_template('index.html')
 
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('index.html')
 
@@ -62,6 +62,11 @@ def logout():
     session.pop('logged_in', None)
     flash('Logged out')
     return redirect(url_for('home'))
+
+
+@app.route('/<name>')
+def start_page(name):
+    return render_template(name+'.html')
 
 
 
