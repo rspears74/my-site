@@ -28,13 +28,14 @@ def lights_off(on_off):
     lights = hue.get_all_lights()
     if on_off=='on':
         hue.set_all_lights_state(lights, True, hue.nice_yellow)
-        return "Lights on."
+        flash("Lights turned on.")
     elif on_off=='off':
         hue.set_all_lights_state(lights, False, hue.nice_yellow)
-        return "Lights off."
+        flash("Lights turned off.")
+    return render_template('index.html')
 
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
 
