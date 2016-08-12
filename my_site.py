@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, url_for,\
 flash, session, send_file
 from flask_wtf import Form
+from flask_bcrypt import Bcrypt
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
 from functools import wraps
@@ -9,6 +10,7 @@ import os
 from config import *
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
 app.config.from_object(os.environ['APP_SETTINGS'])
 
 
@@ -48,7 +50,8 @@ def login():
     if request.method == 'POST':
         if form.validate_on_submit():
             if request.form['username'] == 'randall'\
-                and request.form['password'] == PASSWORD:
+                and bcrypt.check_password_hash(PASSWORD,
+                    request.form['password']):
                 session['logged_in'] = True
                 flash('Successfully logged in.')
                 return redirect(url_for('home'))
