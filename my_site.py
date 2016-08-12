@@ -5,10 +5,11 @@ from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
 from functools import wraps
 import hue
+import os
 
 
 app = Flask(__name__)
-app.secret_key = '0bq20g8n20nvq02nv0qjf09j203fj'
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 
 def login_required(f):
@@ -89,4 +90,4 @@ class LoginForm(Form):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
