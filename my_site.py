@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired
 from functools import wraps
 import hue
 import os
-from config import BaseConfig.PASSWORD as the_password
+from config import *
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
@@ -48,7 +48,7 @@ def login():
     if request.method == 'POST':
         if form.validate_on_submit():
             if request.form['username'] == 'randall'\
-                and request.form['password'] == the_password:
+                and request.form['password'] == PASSWORD:
                 session['logged_in'] = True
                 flash('Successfully logged in.')
                 return redirect(url_for('home'))
