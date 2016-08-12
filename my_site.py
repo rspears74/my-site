@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired
 from functools import wraps
 import hue
 import os
-import config
+from config import PASSWORD
 
 
 app = Flask(__name__)
