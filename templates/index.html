@@ -1,13 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>Home</h1>
-<p><a href='/randall'>Start Page</a></p>
-<p><a href='/camera'>Camera</a></p>
-<p><a href='/lights/off'>Lights Off</a></p>
-<p><a href='/lights/on'>Lights On</a></p>
-<p><a href='/logout'>Logout</a></p>
-<br>
+<div class="header">
+  <h1>Home</h1>
+</div>
+<div class="buttons">
+  <div class="buttoncontainer">
+    <a href='/randall'>
+      <div class="button1">
+        <h3>Start Page</h3>
+      </div>
+    </a>
+  </div>
+  <div class="buttoncontainer">
+    <a href='/camera'>
+      <div class="button1">
+        <h3>Camera</h3>
+      </div>
+    </a>
+  </div>
+  <div class="buttoncontainer" id="lightsOn">
+    <a href='/lights/on'>
+      <div class="button1">
+        <h3>Lights On</h3>
+      </div>
+    </a>
+  </div>
+  <div class="buttoncontainer" id="lightsOff">
+    <a href='/lights/off'>
+      <div class="button1">
+        <h3>Lights Off</h3>
+      </div>
+    </a>
+  </div>
+  <div class="buttoncontainer">
+    <a href='/logout'>
+      <div class="button1">
+        <h3>Logout</h3>
+      </div>
+    </a>
+  </div>
+</div>
 
 {% endblock %}

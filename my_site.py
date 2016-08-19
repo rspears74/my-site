@@ -35,7 +35,7 @@ def lights_off(on_off):
     elif on_off=='off':
         hue.set_all_lights_state(lights, False, hue.nice_yellow)
         flash("Lights turned off.")
-    return render_template('index.html')
+    return redirect(url_for('home'))
 
 
 @app.route('/')

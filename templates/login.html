@@ -2,8 +2,10 @@
 
 {% block content %}
 
-<h1>Please login</h1>
-<br>
+<div class="header">
+  <h1>Login</h1>
+</div>
+<div class="signin">
 <form class="form-signin" role="form" action="" method="post">
   {{ form.csrf_token }}
   <p>
@@ -16,6 +18,7 @@
       {% endif %}
     </span>
   </p>
+  <br>
   <p>
     {{ form.password(placeholder="password") }}
     <span class="error">
@@ -26,8 +29,9 @@
       {% endif %}
     </span>
   </p>
-  <button class="btn btn-sm btn-success" type="submit">Sign in</button>
+  <br>
+  <button class="btn" type="submit">Sign in</button>
 </form>
-<br>
+</div>
 
 {% endblock %}

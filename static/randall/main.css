@@ -49,7 +49,7 @@ body {
 }
 
 .button1 {
-  width: 180px;
+  width: 220px;
   height: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -80,7 +80,7 @@ body {
 }
 
 .buttoncontainer {
-  width: 180px;
+  width: 220px;
   position: relative;
   margin-left: 10px;
 }
@@ -88,7 +88,7 @@ body {
 .buttons {
   font-family: 'Prompt', sans-serif;
   float: left;
-  width: 200px;
+  width: 240px;
   height: 1049px;
   background: #6e6e6e;
   border-right: 1px solid #eeeeee;
@@ -131,4 +131,33 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.flash-content {
+  background-color: #fdfdfd;
+  font-family: 'Prompt';
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 20px;
+  border: 1px solid #888;
+  float: left;
+}
+
+.signin {
+  background-color: #ededed;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 10px;
+  border: 1px solid #888;
+  float: left;
+}
+
+.btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
 }
