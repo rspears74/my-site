@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for,\
-flash, session, send_file
+    flash, session
 from flask_wtf import Form
 from flask_bcrypt import Bcrypt
 from wtforms import StringField, PasswordField
@@ -29,10 +29,10 @@ def login_required(f):
 @login_required
 def lights_off(on_off):
     lights = hue.get_all_lights()
-    if on_off=='on':
+    if on_off == 'on':
         hue.set_all_lights_state(lights, True, hue.nice_yellow)
         flash("Lights turned on.")
-    elif on_off=='off':
+    elif on_off == 'off':
         hue.set_all_lights_state(lights, False, hue.nice_yellow)
         flash("Lights turned off.")
     return redirect(url_for('home'))
@@ -50,8 +50,10 @@ def login():
     if request.method == 'POST':
         if form.validate_on_submit():
             if request.form['username'] == 'randall'\
-                and bcrypt.check_password_hash(PASSWORD,
-                    request.form['password']):
+                and bcrypt.check_password_hash(
+                    PASSWORD,
+                    request.form['password']
+                    ):
                 session['logged_in'] = True
                 flash('Successfully logged in.')
                 return redirect(url_for('home'))
@@ -71,7 +73,6 @@ def logout():
 @app.route('/<name>')
 def start_page(name):
     return render_template(name+'.html')
-
 
 
 @app.route('/camera')
