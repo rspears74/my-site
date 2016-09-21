@@ -22,6 +22,9 @@ var main = function(){
   $('.listcontainer').hover(function(){
     $(this).toggleClass('imgactive');
   });
+  $('.btn2').hover(function(){
+    $(this).toggleClass('btn2-active');
+  });
 };
 
 

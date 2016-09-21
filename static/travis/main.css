@@ -132,3 +132,44 @@ body {
   left: 0;
   right: 0;
 }
+
+.btn2 {
+  background-color: #4040df;
+  font-family: 'Product Sans', 'Futura';
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.btn2-active {
+  background-color: #3030ad;
+}
+
+.google-search {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #888;
+  background-color: #ffffff;
+  float: left;
+}
+
+input#q {
+  font-size: 16px;
+  padding: 2px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #aaaaaa;
+  transition: border-bottom 0.5s;
+}
+
+input#q[type=text]:focus {
+  border-bottom: 2px solid #8080fd;
+}
