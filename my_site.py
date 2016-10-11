@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for,\
-    flash, session
+    flash, session, jsonify
 from flask_wtf import Form
 from flask_bcrypt import Bcrypt
 from wtforms import StringField, PasswordField
@@ -25,20 +25,21 @@ def login_required(f):
     return wrap
 
 
-@app.route('/lights/<on_off>')
+@app.route('/check-all-lights')
 @login_required
-def lights_off(on_off):
-    lights = hue.get_all_lights()
-    if on_off == 'on':
-        hue.set_all_lights_state(lights, True, hue.nice_yellow)
-        flash("Lights turned on.")
-    elif on_off == 'off':
-        hue.set_all_lights_state(lights, False, hue.nice_yellow)
-        flash("Lights turned off.")
-    return redirect(url_for('home'))
+def check_lights():
+    return jsonify(hue.get_all_lights())
+
+
+@app.route('/set-lights', methods=['PUT'])
+@login_required
+def set_lights():
+    data = request.get_json(force=True)
+    return jsonify(hue.turn_lights_on_off(data))
 
 
 @app.route('/')
+@login_required
 def home():
     return render_template('index.html')
 
@@ -55,7 +56,7 @@ def login():
                     request.form['password']
                     ):
                 session['logged_in'] = True
-                flash('Successfully logged in.')
+#                flash('Successfully logged in.')
                 return redirect(url_for('home'))
             else:
                 error = 'Invalid credentials'

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<script src="static/randall/home.js" type="text/javascript"></script>
 <div class="header">
   <h1>Home</h1>
 </div>
@@ -19,26 +20,65 @@
       </div>
     </a>
   </div>
-  <div class="buttoncontainer" id="lightsOn">
-    <a href='/lights/on'>
-      <div class="button1">
-        <h3>Lights On</h3>
-      </div>
-    </a>
-  </div>
-  <div class="buttoncontainer" id="lightsOff">
-    <a href='/lights/off'>
-      <div class="button1">
-        <h3>Lights Off</h3>
-      </div>
-    </a>
-  </div>
   <div class="buttoncontainer">
     <a href='/logout'>
       <div class="button1">
         <h3>Logout</h3>
       </div>
     </a>
+  </div>
+</div>
+<div id="control-panel">
+  <div class="control" style="border-bottom: solid 1px black;">
+    <span class="slider-label">All Lights</span>
+    <label class="switch" id="all">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="slider-label">Living Room</span>
+    <label class="switch" id="g-1">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="spacer" style="width: 10px; display: inline-block;"></span>
+    <span class="slider-label">Floor Lamp</span>
+    <label class="switch" id="l-2">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="spacer" style="width: 10px; display: inline-block;"></span>
+    <span class="slider-label">Desk Lamp</span>
+    <label class="switch" id="l-3">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control" style="border-bottom: solid 1px black;">
+    <span class="spacer" style="width: 10px; display: inline-block;"></span>
+    <span class="slider-label">Duck Lamp</span>
+    <label class="switch" id="l-1">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="slider-label">Hue Go</span>
+    <label class="switch" id="l-4">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
   </div>
 </div>
 
