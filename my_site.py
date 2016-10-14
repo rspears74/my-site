@@ -39,6 +39,11 @@ def set_lights():
 
 
 @app.route('/')
+def main():
+    return redirect(url_for('start_page', name='randall'))
+
+
+@app.route('/home')
 @login_required
 def home():
     return render_template('index.html')
