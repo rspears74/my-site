@@ -8,6 +8,7 @@ from functools import wraps
 import hue
 import os
 from config import *
+from datetime import datetime
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
@@ -46,7 +47,8 @@ def main():
 @app.route('/home')
 @login_required
 def home():
-    return render_template('index.html')
+    timestamp = datetime.now().strftime('%d%H%M%S')
+    return render_template('index.html', timestamp=timestamp)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -84,7 +86,8 @@ def start_page(name):
 @app.route('/camera')
 @login_required
 def camera():
-    return render_template('camera.html')
+    timestamp = datetime.now().strftime('%d%H%M%S')
+    return render_template('camera.html', timestamp=timestamp)
 
 
 class LoginForm(Form):
