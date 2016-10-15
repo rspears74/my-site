@@ -14,9 +14,10 @@ def get_all_lights():
     return json.loads(requests.get(BASEURL + 'lights/').text)
 
 
-# lights is a lights object from the get_all_lights() method
+# lights is an interable (dict from get_all_lights function or simply
+# a list of strings of numbers)
 # on_off is bool
-# color is a dict that contains 'hue' and 'sat' values
+# color is a dict that can contain 'hue' and 'sat' values
 def set_all_lights_state(lights, on_off, color):
     for light in lights:
         requests.put(BASEURL + 'lights/' + light + '/state',
