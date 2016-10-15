@@ -29,5 +29,13 @@ var main = function(){
 
 };
 
+$(main);
 
-$(document).ready(main);
+var homePage = function () {
+  $('.menuitem').hover(function() {
+    $(this).toggleClass('active-home');
+    $(this).children().toggleClass('whitetxt');
+  });
+};
+
+$(homePage);

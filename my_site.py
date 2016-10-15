@@ -40,15 +40,15 @@ def set_lights():
 
 
 @app.route('/')
-def main():
-    return redirect(url_for('start_page', name='randall'))
+def homepage():
+    return render_template('index.html')
 
 
 @app.route('/home')
 @login_required
 def home():
     timestamp = datetime.now().strftime('%d%H%M%S')
-    return render_template('index.html', timestamp=timestamp)
+    return render_template('home.html', timestamp=timestamp)
 
 
 @app.route('/login', methods=['GET', 'POST'])

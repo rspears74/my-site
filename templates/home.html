@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script src="static/randall/home.js" type="text/javascript"></script>
+<div class="header">
+  <h1>Home</h1>
+</div>
+<div class="buttons">
+  <div class="buttoncontainer">
+    <a href='/randall'>
+      <div class="button1">
+        <h3>Start Page</h3>
+      </div>
+    </a>
+  </div>
+  <div class="buttoncontainer">
+    <a href='/logout'>
+      <div class="button1">
+        <h3>Logout</h3>
+      </div>
+    </a>
+  </div>
+</div>
+<div id="control-panel">
+  <div class="control" style="border-bottom: solid 1px black;">
+    <span class="slider-label">All Lights</span>
+    <label class="switch" id="all">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="slider-label">Living Room</span>
+    <label class="switch" id="g-1">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="spacer" style="width: 10px; display: inline-block;"></span>
+    <span class="slider-label">Floor Lamp</span>
+    <label class="switch" id="l-2">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="spacer" style="width: 10px; display: inline-block;"></span>
+    <span class="slider-label">Desk Lamp</span>
+    <label class="switch" id="l-3">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control" style="border-bottom: solid 1px black;">
+    <span class="spacer" style="width: 10px; display: inline-block;"></span>
+    <span class="slider-label">Duck Lamp</span>
+    <label class="switch" id="l-1">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+  <div class="control">
+    <span class="slider-label">Hue Go</span>
+    <label class="switch" id="l-4">
+      <input type="checkbox" />
+      <div class="slider round">
+      </div>
+    </label>
+  </div>
+</div>
+<div id="camera-pic">
+  <a href="/camera"><img style="margin-top: 10px; width: 433px; height: 325px;" src="static/image.jpg?mod={{timestamp}}" /></a>
+</div>
+
+{% endblock %}
