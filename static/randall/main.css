@@ -269,6 +269,7 @@ body {
 }
 
 .slider-label {
+  font-family: 'Rubik', sans-serif;
   position: absolute;
   margin-left: 70px;
   top: 50%;
