@@ -52,8 +52,7 @@ body {
 .titletext {
   margin: 0;
   white-space: nowrap;
-  line-height: 50px;
-  text-align: center;
+  top: 50%;
 }
 
 .active-home {
