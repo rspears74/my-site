@@ -5,4 +5,4 @@ with open(activate_this) as file_:
 import sys
 sys.path.append('/var/www/my-site')
 
-from my_site import app as application
+from run import app as application
