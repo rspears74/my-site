@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Music</h1>
+	<ul>
+	{% for folder in folders %}
+		<li><a href='/tunes/{{filepath}}/{{folder}}'>{{folder}}</a> <a style="font-size: 10px" href='/download/{{filepath}}/{{folder}}'>   Download</a></li>
+	{% endfor %}
+	</ul>
+	<a href='/tunes/{{'/'.join(filepath.split('/')[:-1])}}'>Back</a>
+</body>
+</html>
