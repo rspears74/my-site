@@ -10,7 +10,7 @@ music = Blueprint('music', __name__, template_folder='templates')
 @login_required
 def nav(filepath):
 	fullpath = '/media/randall/RANDALL/' + filepath
-	fldrs = [os.fsdecode(os.fsencode(fldr)) for fldr in os.listdir(fullpath) if fldr[0] != '.']
+	fldrs = [fldr.encode('utf-8', errors='surrogateescape').decode('utf-8') for fldr in os.listdir(fullpath) if fldr[0] != '.']
 	return render_template('music.html', folders=fldrs, filepath=filepath)
 
 @music.route('/download/<path:filepath>')
