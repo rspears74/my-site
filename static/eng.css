@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Muli; sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #445566;
+  height: 100%;
+}
+
+h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {
+  padding: 10px;
+}
+
+h4 {
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+}
+
+input {
+  padding: 0px;
+  margin-left: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border-bottom: 2px solid #88aaff;
+}
+
+button {
+  padding: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #eeeeee;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+select {
+  background-color: #eeeeee;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-button {
+  color: black;
+}
+
+.main-container {
+  height: 100%;
+}
+
+.module-drop-down-entry {
+  padding: 10px;
+  color: black;
+}
+
+.selected {
+  background-color: #bbbbbb;
+}
+
+.button-selected {
+  background-color: #aaaaaa;
+  box-shadow: 0px 0px 3px 0px #444444;
+}
+
+.header-link {
+  padding: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.content-container {
+  width: 800px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  box-shadow: 0px 3px 3px 0px #444444;
+}
+
+.inputs-beam {
+  float: left;
+  width: 40%;
+}
+
+.results-beam {
+  margin-left: 40%;
+}
+
+.single-input {
+  padding-left: 15px;
+}
+
+.input-line {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#header {
+  background-color: #dddddd;
+  margin: 0;
+}
+
+#module-drop-down {
+  z-index: 2;
+  position: absolute;
+  background-color: #dddddd;
+  box-shadow: 0px 0px 3px 0px #444444;
+  transform: translate(75px);
+}
+
+#message-box {
+  text-align: center;
+  background: #222244;
+  opacity: 0.5;
+  border-radius: 5px;
+  color: #ffffff;
+  z-index: 3;
+  position: absolute;
+  height: 50px;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+}
+
+#plotly-container {
+  float: left;
+  width: 480px;
+  height: 350px;
+  margin-left: inherit;
+  position: relative;
+}

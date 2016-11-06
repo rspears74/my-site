@@ -1,0 +1,106 @@
+{% extends 'engbase.html' %}
+
+{% block content %}
+
+<div class="content-container">
+  <br />
+  <h1 class="page-title">Beam Force Calculator</h1>
+  <div class="inputs-beam">
+    <h2 class="section-title">Inputs</h2>
+    <div class="input-section" id="beam-properties">
+      <h4>Beam Properties</h4>
+      <div class="input-line">
+        <span class="single-input">Moment of Inertia </span><input class="value-input" type="text" name="mom-of-inertia" size="5" autofocus="True"> in<sup>4</sup></input><br />
+      </div>
+      <div class="input-line">
+        <span class="single-input" style="padding-right: 83px;">Material</span>
+        <select class="value-input" name="material-input" id="material-input">
+          <option value="" disabled selected>Select</option>
+          <option value="steel">Steel</option>
+          <option value="steel">Concrete</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-section" id="node-input">
+      <h4>Node Input</h4>
+      <div class="input-line">
+        <span class="single-input" style="padding-right: 10px;">Location</span>
+        <input class="value-input" type="text" name="node-loc" size="5"> ft</input>
+        <button id="add-node" name="add-node">Add Node</button>
+      </div>
+    </div>
+    <div class="input-section" id="bound-input">
+      <h4>Boundary Conditions</h4>
+      <div class="input-line">
+        <span class="single-input" style="padding-right: 55px;">Select Node</span>
+        <select class="value-select" name="node-select" id="node-select">
+        </select>
+        <span id="node-select-location-wrap" style="display: none;"> Location: <span id="node-select-location"></span> ft</span>
+      </div>
+      <div class="input-line">
+        <p class="single-input" style="padding-right: 55px;">Fixity</p>
+        <div style="padding-left: 10px;"><input class="bound-select" type="checkbox" name="displacement" value="1"/> Displacement</div>
+        <div style="padding-left: 10px;"><input class="bound-select" type="checkbox" name="rotation" value="1" /> Rotation</div>
+      </div>
+      <div class="input-line">
+        <button style="margin-left: 15px; margin-top: 5px; margin-bottom: 5px;" id="apply-bound" name="apply-bound">Apply</button>
+      </div>
+    </div>
+    <div class="input-section" id="load-input">
+      <h4>Load Input</h4>
+      <div class="input-line">
+        <span class="single-input" style="padding-right: 20px;">Load Type</span>
+        <select class="value-select" id="load-type-select" name="load-type-select">
+          <option value="" disabled selected>Select</option>
+          <option value="point">Point Load</option>
+          <option value="distributed">Distributed Load</option>
+        </select>
+      </div>
+      <div id="point-load-input" style="display: none;">
+        <div class="input-line">
+          <span class="single-input" style="padding-right: 30px;">Load</span><input class="value-input" type="text" name="load-value" size="5"> kip</input>
+        </div>
+        <div class="input-line">
+          <span class="single-input" style="padding-right: 10px;">Location</span><input class="value-input" type="text" name="load-loc" size="5"> ft</input>
+        </div>
+      </div>
+      <div id="distributed-load-input" style="display: none;">
+        <div class="input-line">
+          <span class="single-input" style="padding-right: 23px;">Load</span><input class="value-input" type="text" name="load-value" size="5"> kip/ft</input>
+        </div>
+        <div class="input-line">
+          <span class="single-input" style="padding-right: 10px;">Location 1</span><input class="value-input" type="text" name="load-loc1" size="5"> ft</input>
+        </div>
+        <div class="input-line">
+          <span class="single-input" style="padding-right: 10px;">Location 2</span><input class="value-input" type="text" name="load-loc2" size="5"> ft</input>
+        </div>
+      </div>
+      <div class="input-line">
+        <button style="margin-left: 15px; margin-top: 5px; margin-bottom: 5px;" id="add-load" name="add-load">Add</button>
+      </div>
+    </div>
+    <br>
+    <button id="calculate-beam" name="calculate-beam">Calculate</button>
+    <button id="reset-beam" name="reset-beam">Reset</button>
+  </div>
+  <div id="results-beam">
+    <h2 class="section-title">Results</h2>
+    <div id="plotly-container">
+    </div>
+  </div>
+  <div id="message-box" style="display: none;">
+    <p id="node-input-success" style="display: none;">
+      Node <span id="node-num"></span> added
+    </p>
+    <p id="input-error" style="display: none;">
+      Invalid input. Try again.
+    </p>
+    <p id="apply-bound-message" style="display: none;">
+      Bounds successfully applied.
+    </p>
+    <p id="load-added-message" style="display: none;">
+      Load successfully applied.
+    </p>
+  </div>
+</div>
+{% endblock %}

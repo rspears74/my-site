@@ -261,6 +261,12 @@ body {
   margin: 10px;
   float: left;
   width: 300px;
+  border-radius: 10px;
+}
+
+#control-panel-title {
+  margin-left: 100px;
+  margin-top: 10px;
 }
 
 .control {

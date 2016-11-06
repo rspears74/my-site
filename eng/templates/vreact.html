@@ -1,0 +1,42 @@
+{% extends 'engbase.html' %}
+
+{% block content %}
+
+<div class="content-container">
+  <br />
+  <h1 class="page-title">Max Pier Reaction Calculator</h1>
+  <div class="inputs">
+    <h2 class="section-title">Inputs</h2>
+    <div class="input-section" id="span-length-1">
+      <h4>Span Length 1</h4>
+      <input class="value-input" type="text" name="span-length-1" size="3" autofocus="True"> ft</input>
+    </div>
+    <div class="input-section" id="span-length-2">
+      <h4>Span Length 2</h4>
+      <input class="value-input" type="text" name="span-length-2" size="3"/>
+    </div>
+    <div class="input-section" id="increment">
+      <h4>Increment</h4>
+      <input class="value-input" type="text" name="increment" size="3"> in</input>
+    </div>
+    <div class="input-section" id="impact-factor">
+      <h4>Impact Factor</h4>
+      <input class="value-input" type="text" name="impact-factor" size="3"/>
+    </div>
+    <div class="input-section" id="dist-factor">
+      <h4>Distribution Factor</h4>
+      <input class="value-input" type="text" name="dist-factor" size="3"/>
+    </div>
+    <br>
+    <button id="calculate-vreact" name="calculate-vreact">Calculate</button>
+    <button id="reset" name="reset">Reset</button>
+    <p id="error-container" style="display: none"><strong>Error: </strong><span id="error"></span></p>
+  </div>
+  <div id="results" style="display: none">
+    <h2 class="section-title">Results</h2>
+    <p>The max pier reaction <strong><span id="vreact-max"></span> kip</strong> occurs when the train is <strong><span id="vreact-loc"></span> ft</strong> past the last support.</p>
+    <p>The contribution from span 1 is <strong><span id="span-1-contrib"></span> kip</strong> and the contribution from span 2 is <strong><span id="span-2-contrib"></span> kip</strong>.</p>
+    <div id="showvreact-container"></div>
+  </div>
+</div>
+{% endblock %}

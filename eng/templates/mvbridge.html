@@ -1,0 +1,46 @@
+{% extends 'engbase.html' %}
+
+{% block content %}
+
+<div class="content-container">
+  <br />
+  <h1 class="page-title">Max Shear/Moment Calculator</h1>
+  <div class="inputs">
+    <h2 class="section-title">Inputs</h2>
+    <div class="input-section" id="span-length">
+      <h4>Span Length</h4>
+      <input class="value-input" type="text" name="span-length" size="3" autofocus="True"> ft</input>
+    </div>
+    <div class="input-section" id="x-location">
+      <h4>X-Location  </h4>
+      <input class="value-input" type="text" name="x-loc" size="3"/>
+      <input type="radio" name="feet-or-frac" value="feet" checked>ft</input>
+      <input type="radio" name="feet-or-frac" value="frac">fraction of span</input>
+    </div>
+    <div class="input-section" id="increment">
+      <h4>Increment</h4>
+      <input class="value-input" type="text" name="increment" size="3"> in</input>
+    </div>
+    <div class="input-section" id="impact-factor">
+      <h4>Impact Factor</h4>
+      <input class="value-input" type="text" name="impact-factor" size="3">
+    </div>
+    <div class="input-section" id="dist-factor">
+      <h4>Distribution Factor</h4>
+      <input class="value-input" type="text" name="dist-factor" size="3">
+    </div>
+    <br>
+    <button id="calculate" name="calculate">Calculate</button>
+    <button id="reset" name="reset">Reset</button>
+    <p id="error-container" style="display: none"><strong>Error: </strong><span id="error"></span></p>
+  </div>
+  <div id="results" style="display: none">
+    <h2 class="section-title">Results</h2>
+    <p>The maximum moment <strong><span id="mmax">?</span> k-ft</strong> occurs when the front of the train is <strong><span id="mmaxloc">?</span> ft</strong> from the last support.</p>
+    <p>The maximum shear <strong><span id="vmax">?</span> k</strong> occurs when the front of the train is <strong><span id="vmaxloc">?</span> ft</strong> from the last support.</p>
+    <button id="showpos" name="showpos">Show Train Position Plots</button>
+    <div id="showmpos-container"></div>
+    <div id="showvpos-container"></div>
+  </div>
+</div>
+{% endblock %}

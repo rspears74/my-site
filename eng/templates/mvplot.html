@@ -1,0 +1,41 @@
+{% extends 'engbase.html' %}
+
+{% block content %}
+
+<div class="content-container">
+  <br />
+  <h1 class="page-title">Shear/Moment Plots</h1>
+  <div class="inputs">
+    <h2 class="section-title">Inputs</h2>
+    <div class="input-section" id="span-length">
+      <h4>Span Length</h4>
+      <input class="value-input" type="text" name="span-length" size="3" autofocus="True"> ft</input>
+    </div>
+    <div class="input-section" id="num-points">
+      <h4>Number of Points</h4>
+      <input class="value-input" type="text" name="n-points" size="3"/>
+    </div>
+    <div class="input-section" id="increment">
+      <h4>Increment</h4>
+      <input class="value-input" type="text" name="increment" size="3"> in</input>
+    </div>
+    <div class="input-section" id="impact-factor">
+      <h4>Impact Factor</h4>
+      <input class="value-input" type="text" name="impact-factor" size="3">
+    </div>
+    <div class="input-section" id="dist-factor">
+      <h4>Distribution Factor</h4>
+      <input class="value-input" type="text" name="dist-factor" size="3">
+    </div>
+    <br>
+    <button id="generate-plots" name="generate-plots">Generate Plots</button>
+    <button id="reset" name="reset">Reset</button>
+    <p id="error-container" style="display: none"><strong>Error: </strong><span id="error"></span></p>
+  </div>
+  <div id="results" style="display: none;">
+    <h2 class="section-title">Results</h2>
+    <div id="mplot-container"></div>
+    <div id="vplot-container"></div>
+  </div>
+</div>
+{% endblock %}

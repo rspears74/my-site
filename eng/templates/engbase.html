@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bridge Design Tools</title>
+  <link href="static/eng.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link href="static/train-5-32.ico" rel="shortcut icon" type="image/ico">
+  <script src="static/jquery-3.1.0.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  </script>
+  <script src="static/d3.v3.min.js" type="text/javascript"></script>
+  <script src="static/mpld3.v0.2.min.js" type="text/javascript"></script>
+  <script src="static/plotly-latest.min.js" type="text/javascript"></script>
+  <script src="static/plotly-me.js" type="text/javascript"></script>
+  <script src="static/eng.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="header-container" id="header">
+    <a href={{url_for('eng.home')}}>
+      <div class="header-link" id="home">
+        <div class="header-button">Home</div>
+    </div></a>
+    <a href="javascript:void(0)">
+      <div class="header-link" id="modules">
+        <div class="header-button">Modules</div>
+    </div></a>
+  </div>
+  <div class="header-menu" id="module-drop-down" style="display: none;">
+    <a href={{url_for('eng.mvbridgepage')}}><div class="module-drop-down-entry">Max Shear/Moment Calculator</div></a>
+    <a href={{url_for('eng.mvplotpage')}}><div class="module-drop-down-entry">Shear/Moment Plots</div></a>
+    <a href={{url_for('eng.vreactpage')}}><div class="module-drop-down-entry">Max Pier Reaction Calculator</div></a>
+    <a href={{url_for('eng.beampage')}}><div class="module-drop-down-entry">Beam Force Calculator</div></a>
+  </div>
+  <div class="main-container">
+
+  <!-- child template -->
+  {% block content %}{% endblock %}
+
+  </div>
+
+</body>
+</html>
