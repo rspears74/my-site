@@ -350,9 +350,14 @@ var beamCalcButtons = function () {
       }
     }),
     dataType: "json",
-    contentType: "application/json; charset=utf-8",
-    success: function(data) {
-      $('#results-container').text(data);
+    contentType: "application/json; charset=utf-8"
+  })
+    .done(function(data) {
+      console.log(data)
+      var x = data.x
+      var y = data.y
+      for (i=0; i<x.length; i++) {
+        deflectedShape(p, x[i], y[i]);
       }
     });
   });

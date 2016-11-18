@@ -1,6 +1,8 @@
 from copy import deepcopy
 import numpy as np
 
+
+# Test data
 data = {
     'nodes': {
         '1': {
@@ -336,6 +338,8 @@ def beam_reactions(members, nodes):
 
     ndof = ndof_calc(nodes)
 
+    nj = len(nodes)
+
     code_nums_restrained = list(range(ndof+1, 2*nj+1))
 
     r = np.zeros(2*nj-ndof).reshape(2*nj-ndof, 1)
@@ -360,7 +364,35 @@ def main(data):
     members = member_end_forces(members)
     r = beam_reactions(members, nodes)
 
-    return r
+    # create returnable deflection and rotation lists
+    xs = []
+    def_rot = []
+    defl = []
+    rot = []
+    for member in sorted(members):
+        if member == '1':
+            for n in [x[0] for x in members[member]['u'].tolist()]:
+                def_rot.append(n)
+            xs.append(members[member]['begin']['location'])
+            xs.append(members[member]['end']['location'])
+        else:
+            for n in [x[0] for x in members[member]['u'][2:].tolist()]:
+                def_rot.append(n)
+            xs.append(members[member]['end']['location'])
+    for i, val in enumerate(def_rot):
+        if i % 2 == 0:
+            defl.append(val)
+        else:
+            rot.append(val)
+    print(xs)
+    return {
+        'd': {
+            'x': xs,
+            'defl': defl,
+            'rot': rot
+        },
+        'r': r.tolist()
+    }
 
 
 
@@ -386,9 +418,7 @@ def ndof_calc(node_list):
     return ndof
 
 
-
-
-
+main(data)
 
 # Testing/debugging shit
 

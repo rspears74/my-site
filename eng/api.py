@@ -2,7 +2,8 @@ from flask import Blueprint, jsonify, request
 from flask_restful import Resource, Api
 import json
 import eng.mvbridge as mvb
-import eng.beam
+import eng.beam as beam
+import eng.deflected_shape as deflected_shape
 
 eng_api = Api(Blueprint('eng_api', __name__))
 
@@ -88,4 +89,5 @@ class Beam(Resource):
     def post(self):
         data = request.get_json()
         results = beam.main(data)
-        return jsonify(results)
+        def_shape_vals = deflected_shape.main(results['d'])
+        return jsonify(def_shape_vals)
