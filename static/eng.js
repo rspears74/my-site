@@ -354,8 +354,8 @@ var beamCalcButtons = function () {
   })
     .done(function(data) {
       console.log(data)
-      var x = data.x
-      var y = data.y
+      var x = data['def'].x
+      var y = data['def'].y
       for (i=0; i<x.length; i++) {
         deflectedShape(p, x[i], y[i]);
       }

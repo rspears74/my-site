@@ -3,47 +3,47 @@ import numpy as np
 
 
 # Test data
-data = {
-    'nodes': {
-        '1': {
-            'location': 0,
-            'displacement': 1,
-            'rotation': 0
-        },
-        '2': {
-            'location': 10,
-            'displacement': 0,
-            'rotation': 0
-        },
-        '3': {
-            'location': 30,
-            'displacement': 1,
-            'rotation': 0
-        }
-    },
-    'loads': {
-        '1': {
-            'type': 'distributed',
-            'load': 10,
-            'loc1': 0,
-            'loc2': 14
-        },
-        '2': {
-            'type': 'point',
-            'load': 20,
-            'loc': 10
-        },
-        '3': {
-            'type': 'point',
-            'load': 100,
-            'loc': 15
-        }
-    },
-    'properties': {
-        'momentOfInertia': 1000,
-        'material': 'steel'
-    }
-}
+#data = {
+#    'nodes': {
+#        '1': {
+#            'location': 0,
+#            'displacement': 1,
+#            'rotation': 0
+#        },
+#        '2': {
+#            'location': 10,
+#            'displacement': 0,
+#            'rotation': 0
+#        },
+#        '3': {
+#            'location': 30,
+#            'displacement': 1,
+#            'rotation': 0
+#        }
+#    },
+#    'loads': {
+#        '1': {
+#            'type': 'distributed',
+#            'load': 10,
+#            'loc1': 0,
+#            'loc2': 14
+#        },
+#        '2': {
+#            'type': 'point',
+#            'load': 20,
+#            'loc': 10
+#        },
+#        '3': {
+#            'type': 'point',
+#            'load': 100,
+#            'loc': 15
+#        }
+#    },
+#    'properties': {
+#        'momentOfInertia': 1000,
+#        'material': 'steel'
+#    }
+#}
 
 def model(nodes, loads):
     """
@@ -363,13 +363,14 @@ def main(data):
     members = joint_disp_local(d, members)
     members = member_end_forces(members)
     r = beam_reactions(members, nodes)
+    print(d)
 
     # create returnable deflection and rotation lists
     xs = []
     def_rot = []
     defl = []
     rot = []
-    for member in sorted(members):
+    for member in sorted(members, key=int):
         if member == '1':
             for n in [x[0] for x in members[member]['u'].tolist()]:
                 def_rot.append(n)
@@ -418,7 +419,6 @@ def ndof_calc(node_list):
     return ndof
 
 
-main(data)
 
 # Testing/debugging shit
 

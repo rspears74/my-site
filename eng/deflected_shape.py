@@ -7,7 +7,9 @@ rot = [0, -7.60345e-04, 3.95379e-02]
 def main(data):
 
     x = data['x']
-    defl = data['defl']
+    defl = []
+    for d in data['defl']:
+        defl.append(d/12)
     rot = data['rot']
 
     n = len(x)

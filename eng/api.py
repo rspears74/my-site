@@ -90,4 +90,4 @@ class Beam(Resource):
         data = request.get_json()
         results = beam.main(data)
         def_shape_vals = deflected_shape.main(results['d'])
-        return jsonify(def_shape_vals)
+        return jsonify({'results':results, 'def':def_shape_vals})

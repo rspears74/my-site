@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Music</title>
 </head>
 <body>
 	<h1>Music</h1>
@@ -11,5 +11,6 @@
 	{% endfor %}
 	</ul>
 	<a href='/tunes/{{'/'.join(filepath.split('/')[:-1])}}'>Back</a>
+	<a href="{{url_for('start.start_page',name='randall'}}"
 </body>
 </html>
