@@ -19,7 +19,7 @@ function updateClock () {
 }
 
 function getWeather () {
-    var location = {city: "Jacksonville", state: "FL"};
+    var location = {city: "Englewood", state: "CO"};
     var wgAPIKey = "e64c663775a23710";
     var wunderURL = "http://api.wunderground.com/api/" + wgAPIKey + "/conditions/q/" + location.state + "/" + location.city + ".json";
     $.getJSON(wunderURL, function(data) {

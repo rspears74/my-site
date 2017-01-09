@@ -3,8 +3,9 @@ var checkLights = function () {
     lightStates=[];
     // check each light to see if its on and add to
     // lightStates array
-    for (var i=1; i<=Object.keys(data).length; i++) {
-      lightStates.push(data[i].state.on);
+    var lights_nums = ['4','5','6','7','8']
+    for (var i=0; i<lights_nums.length; i++) {
+      lightStates.push(data[lights_nums[i]].state.on);
     }
     // if all lights are on, set all switches to on
     if (lightStates.every(elem => elem == true)) {
@@ -22,11 +23,11 @@ var checkLights = function () {
     }
     // finally, for each light that is on, set its corresponding
     // switch on
-    for (var i=1; i<=Object.keys(data).length; i++) {
-      if (lightStates[i-1]) {
-        $('.switch#l-'+i+' input').prop('checked', true);
+    for (var i=0; i<lights_nums.length; i++) {
+      if (lightStates[i]) {
+        $('.switch#l-'+lights_nums[i]+' input').prop('checked', true);
       } else {
-        $('.switch#l-'+i+' input').prop('checked', false);
+        $('.switch#l-'+lights_nums[i]+' input').prop('checked', false);
       }
     }
   });
@@ -47,7 +48,7 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['1', '2', '3', '4'],
+          lights: ['5', '6', '7', '8', '4'],
           on_off: true
         })
       }).success(function () {
@@ -60,7 +61,7 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['1', '2', '3', '4'],
+          lights: ['5', '6', '7', '8', '4'],
           on_off: false
         })
       }).success(function () {
@@ -77,14 +78,14 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['1','2','3'],
+          lights: ['5','6','7','8'],
           on_off: true
         })
       }).success(function () {
         // if the request is successful, turn on the group switch and all
         // members of the group
         $('.switch#g-1 input').prop('checked', true);
-        for (var i=1; i<=3; i++) {
+        for (var i=5; i<=8; i++) {
           $('.switch#l-'+i+' input').prop('checked', true);
         }
         // if light 4 is on, turn on the all lights switch
@@ -98,14 +99,14 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['1','2','3'],
+          lights: ['5','6','7','8'],
           on_off: false
         })
       }).success(function () {
         // if the request is successful, turn off the group switch,
         // all members, and the all lights switch
         $('.switch#g-1 input').prop('checked', false);
-        for (var i=1; i<=3; i++) {
+        for (var i=5; i<=8; i++) {
           $('.switch#l-'+i+' input').prop('checked', false);
         }
         $('.switch#all input').prop('checked', false);
@@ -113,24 +114,24 @@ var setLights = function () {
     }
   });
   // actions for Light 1 switch
-  $('.switch#l-1 input').click(function () {
+  $('.switch#l-5 input').click(function () {
     if ($(this).is(':checked')) {
       $.ajax({
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['1'],
+          lights: ['5'],
           on_off: true
         })
       }).success(function () {
         var otherLights = [];
-        for (var i=1; i<=4; i++) {
+        for (var i=4; i<=8; i++) {
           otherLights.push($('.switch#l-'+i+' input').is(':checked'));
         }
         if (otherLights.every(elem => elem == true)) {
           $('.switch#all input').prop('checked', true);
           $('.switch#g-1 input').prop('checked', true);
-        } else if (otherLights[1] == true && otherLights[2] == true) {
+        } else if (otherLights.slice(1,5).every(elem => elem == true)) {
           $('.switch#g-1 input').prop('checked', true);
         }
       });
@@ -139,7 +140,7 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['1'],
+          lights: ['5'],
           on_off: false
         })
       }).success(function () {
@@ -149,24 +150,24 @@ var setLights = function () {
     }
   });
   // actions for Light 2 switch
-  $('.switch#l-2 input').click(function () {
+  $('.switch#l-6 input').click(function () {
     if ($(this).is(':checked')) {
       $.ajax({
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['2'],
+          lights: ['6'],
           on_off: true
         })
       }).success(function () {
         var otherLights = [];
-        for (var i=1; i<=4; i++) {
+        for (var i=4; i<=8; i++) {
           otherLights.push($('.switch#l-'+i+' input').is(':checked'));
         }
         if (otherLights.every(elem => elem == true)) {
           $('.switch#all input').prop('checked', true);
           $('.switch#g-1 input').prop('checked', true);
-        } else if (otherLights[0] == true && otherLights[2] == true) {
+        } else if (otherLights.slice(1,5).every(elem => elem == true)) {
           $('.switch#g-1 input').prop('checked', true);
         }
       });
@@ -175,7 +176,7 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['2'],
+          lights: ['6'],
           on_off: false
         })
       }).success(function () {
@@ -185,24 +186,24 @@ var setLights = function () {
     }
   });
   // actions for Light 3 swtich
-  $('.switch#l-3 input').click(function () {
+  $('.switch#l-7 input').click(function () {
     if ($(this).is(':checked')) {
       $.ajax({
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['3'],
+          lights: ['7'],
           on_off: true
         })
       }).success(function () {
         var otherLights = [];
-        for (var i=1; i<=4; i++) {
+        for (var i=4; i<=8; i++) {
           otherLights.push($('.switch#l-'+i+' input').is(':checked'));
         }
         if (otherLights.every(elem => elem == true)) {
           $('.switch#all input').prop('checked', true);
           $('.switch#g-1 input').prop('checked', true);
-        } else if (otherLights[0] == true && otherLights[1] == true) {
+        } else if (otherLights.slice(1,5).every(elem => elem == true)) {
           $('.switch#g-1 input').prop('checked', true);
         }
       });
@@ -211,7 +212,43 @@ var setLights = function () {
         method: 'PUT',
         url: '/set-lights',
         data: JSON.stringify({
-          lights: ['3'],
+          lights: ['7'],
+          on_off: false
+        })
+      }).success(function () {
+        $('.switch#all input').prop('checked', false);
+        $('.switch#g-1 input').prop('checked', false);
+      });
+    }
+  });
+  // actions for Light 3 swtich
+  $('.switch#l-8 input').click(function () {
+    if ($(this).is(':checked')) {
+      $.ajax({
+        method: 'PUT',
+        url: '/set-lights',
+        data: JSON.stringify({
+          lights: ['8'],
+          on_off: true
+        })
+      }).success(function () {
+        var otherLights = [];
+        for (var i=4; i<=8; i++) {
+          otherLights.push($('.switch#l-'+i+' input').is(':checked'));
+        }
+        if (otherLights.every(elem => elem == true)) {
+          $('.switch#all input').prop('checked', true);
+          $('.switch#g-1 input').prop('checked', true);
+        } else if (otherLights.slice(1,5).every(elem => elem == true)) {
+          $('.switch#g-1 input').prop('checked', true);
+        }
+      });
+    } else {
+      $.ajax({
+        method: 'PUT',
+        url: '/set-lights',
+        data: JSON.stringify({
+          lights: ['8'],
           on_off: false
         })
       }).success(function () {
@@ -232,7 +269,7 @@ var setLights = function () {
         })
       }).success(function () {
         var otherLights = [];
-        for (var i=1; i<=4; i++) {
+        for (var i=4; i<=8; i++) {
           otherLights.push($('.switch#l-'+i+' input').is(':checked'));
         }
         if (otherLights.every(elem => elem == true)) {
