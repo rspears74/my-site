@@ -11,7 +11,7 @@ Personal start/new tab page for my brother and I.
 ### Home Control Center
 Page that allows me to control my Philips Hue lights and view my home using a camera attached to a Raspberry Pi. (Deprecated in favor of homeassistant.io)
 
-### Structural Engineering Tools (*coming soon*)
+### Structural Engineering Tools (*work in progress*)
 Various tools for structural engineering tasks.
 
 #### Max Forces in Span
