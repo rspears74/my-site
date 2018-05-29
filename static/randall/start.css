@@ -1,0 +1,57 @@
+a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    background: rgb(20,20,30);
+}
+
+.list {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.list-link:hover {
+    font-weight: bold;
+}
+
+.tabname {
+    color: rgb(175,175,175);
+    font-size: 25px;
+}
+
+.tabname-active {
+    color: rgb(200,200,200);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.tab {
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    margin: 4px;
+    margin-left: 20px;
+}
+
+#date {
+    color: white;
+    display: inline-block;
+    margin-left: 20px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
+
+#weather {
+    color: white;
+    float: right;
+    margin-right: 20px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
