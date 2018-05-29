@@ -60,7 +60,7 @@ Vue.component('list', {
 });
 
 Vue.component('weather', {
-    template: '<div id="weather">{{weatherString}}</div>',
+    template: '<div id="weather"><a href="https://www.wunderground.com/weather/us/co/englewood">{{weatherString}}</a></div>',
     data: function () {
         return {weatherString: ''}
     },
