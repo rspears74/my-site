@@ -107,33 +107,38 @@ var lists = {
                     links: [
                         {
                             name: 'jriver',
-                            link: 'http://music.rspears.me:52199',
+                            link: 'http://music.rspears.me',
                             id: 1
+                        },
+                        {
+                            name: 'jupyter',
+                            link: 'https://jupyter.rspears.me',
+                            id: 2
                         },
                         {
                             name: 'spotify',
                             link: 'https://open.spotify.com',
-                            id: 2
+                            id: 3
                         },
                         {
                             name: 'gmail',
                             link: 'https://mail.google.com/mail/u/0/#inbox',
-                            id: 3
+                            id: 4
                         },
                         {
                             name: 'dropbox',
                             link: 'https://www.dropbox.com',
-                            id: 4
+                            id: 5
                         },
                         {
                             name: 'amazon',
                             link: 'https://www.amazon.com',
-                            id: 5
+                            id: 6
                         },
                         {
                             name: 'weather',
                             link: 'https://www.wunderground.com',
-                            id: 6
+                            id: 7
                         }
                     ],
                     isActive: true
