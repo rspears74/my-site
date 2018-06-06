@@ -139,6 +139,11 @@ var lists = {
                             name: 'weather',
                             link: 'https://www.wunderground.com',
                             id: 7
+                        },
+                        {
+                            name: 'last fm',
+                            link: 'https://www.last.fm/user/randeezydizzle',
+                            id: 8
                         }
                     ],
                     isActive: true
