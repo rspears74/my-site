@@ -268,6 +268,11 @@ var lists = {
                             name: 'mortgage',
                             link: 'https://uwm.loanadministration.com/',
                             id: 4
+                        },
+                        {
+                            name: 'water',
+                            link: 'https://ipn.paymentus.com/cp/engl',
+                            id: 5
                         }
                     ],
                     isActive: false
