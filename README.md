@@ -1,14 +1,14 @@
 # My Personal Website
-This is my personal website http://www.rspears.me, built using the Python framework Flask, JavaScript, and extensive use of the jQuery library.
+This is my personal website http://www.rspears.me, built using the Python framework Flask, JavaScript, a little bit of Vue and some jQuery.
 
 ## Parts
 ### Personal Home Page
-My personal home page with general information about me and any projects (engineering or programming).
+My personal home page with general information about me and any projects (engineering or programming). Incomplete because it's not that important.
 
 ### Start Pages
-Personal start/new tab page for my brother and I.
+Personal start/new tab page for my brother and I. Mine uses Vue, my brother's uses jQuery.
 
-### Home Control Center
+### Home Control Center (deprecated)
 Page that allows me to control my Philips Hue lights and view my home using a camera attached to a Raspberry Pi. (Deprecated in favor of homeassistant.io)
 
 ### Structural Engineering Tools (*work in progress*)

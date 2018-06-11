@@ -266,7 +266,7 @@ var lists = {
                         },
                         {
                             name: 'mortgage',
-                            link: 'https://uwm.loanadministration.com/',
+                            link: 'https://www.myloancare.com/pub/index.html#/Login?ReturnUrl=%2f',
                             id: 4
                         },
                         {
@@ -295,6 +295,11 @@ var lists = {
                             link: 'https://www.stackoverflow.com',
                             id: 3
                         },
+			{
+		            name: 'namecheap',
+			    link: 'https://ap.www.namecheap.com/dashboard',
+			    id: 4
+			}
                     ],
                     isActive: false
                 },
