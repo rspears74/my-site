@@ -126,24 +126,29 @@ var lists = {
                             id: 4
                         },
                         {
+                            name: 'home',
+                            link: 'https://hass.rspears.me',
+                            id: 5
+                        },
+                        {
                             name: 'dropbox',
                             link: 'https://www.dropbox.com',
-                            id: 5
+                            id: 6
                         },
                         {
                             name: 'amazon',
                             link: 'https://www.amazon.com',
-                            id: 6
+                            id: 7
                         },
                         {
                             name: 'weather',
                             link: 'https://www.wunderground.com',
-                            id: 7
+                            id: 8
                         },
                         {
                             name: 'last fm',
                             link: 'https://www.last.fm/user/randeezydizzle',
-                            id: 8
+                            id: 9
                         }
                     ],
                     isActive: true
@@ -295,11 +300,16 @@ var lists = {
                             link: 'https://www.stackoverflow.com',
                             id: 3
                         },
-			{
-		            name: 'namecheap',
-			    link: 'https://ap.www.namecheap.com/dashboard',
-			    id: 4
-			}
+                        {
+                            name: 'namecheap',
+                            link: 'https://ap.www.namecheap.com/dashboard',
+                            id: 4
+                        },
+                        {
+                            name: 'digitalocean',
+                            link: 'https://cloud.digitalocean.com/dashboard?i=1de60c',
+                            id: 5
+                        }
                     ],
                     isActive: false
                 },
