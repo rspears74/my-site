@@ -131,24 +131,29 @@ var lists = {
                             id: 5
                         },
                         {
+                            name: 'riot',
+                            link: 'https://riot.im/app',
+                            id: 6
+                        },
+                        {
                             name: 'dropbox',
                             link: 'https://www.dropbox.com',
-                            id: 6
+                            id: 7
                         },
                         {
                             name: 'amazon',
                             link: 'https://www.amazon.com',
-                            id: 7
+                            id: 8
                         },
                         {
                             name: 'weather',
                             link: 'https://www.wunderground.com',
-                            id: 8
+                            id: 9
                         },
                         {
                             name: 'last fm',
                             link: 'https://www.last.fm/user/randeezydizzle',
-                            id: 9
+                            id: 10
                         }
                     ],
                     isActive: true
