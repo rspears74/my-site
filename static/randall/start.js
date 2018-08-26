@@ -121,8 +121,8 @@ var lists = {
                             id: 3
                         },
                         {
-                            name: 'gmail',
-                            link: 'https://mail.google.com/mail/u/0/#inbox',
+                            name: 'inbox',
+                            link: 'https://inbox.google.com',
                             id: 4
                         },
                         {
@@ -162,8 +162,8 @@ var lists = {
                     name: 'google',
                     links: [
                         {
-                            name: 'gmail',
-                            link: 'https://mail.google.com/mail/u/0/#inbox',
+                            name: 'inbox',
+                            link: 'https://inbox.google.com',
                             id: 1
                         },
                         {
