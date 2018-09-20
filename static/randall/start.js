@@ -139,6 +139,7 @@ var lists = {
 	  		    name: 'messages',
 			    link: 'https://messages.android.com',
 		            id: 7
+		        },
                         {
                             name: 'dropbox',
                             link: 'https://www.dropbox.com',
@@ -166,8 +167,8 @@ var lists = {
                     name: 'google',
                     links: [
                         {
-                            name: 'inbox',
-                            link: 'https://inbox.google.com',
+                            name: 'gmail',
+                            link: 'https://mail.google.com',
                             id: 1
                         },
                         {
