@@ -121,8 +121,8 @@ var lists = {
                             id: 3
                         },
                         {
-                            name: 'inbox',
-                            link: 'https://inbox.google.com',
+                            name: 'gmail',
+                            link: 'https://mail.google.com',
                             id: 4
                         },
                         {
@@ -135,25 +135,30 @@ var lists = {
                             link: 'https://riot.im/app',
                             id: 6
                         },
+			{
+	  		    name: 'messages',
+			    link: 'https://messages.android.com',
+		            id: 7
+		        },
                         {
                             name: 'dropbox',
                             link: 'https://www.dropbox.com',
-                            id: 7
+                            id: 8
                         },
                         {
                             name: 'amazon',
                             link: 'https://www.amazon.com',
-                            id: 8
+                            id: 9
                         },
                         {
                             name: 'weather',
                             link: 'https://www.wunderground.com',
-                            id: 9
+                            id: 10
                         },
                         {
                             name: 'last fm',
                             link: 'https://www.last.fm/user/randeezydizzle',
-                            id: 10
+                            id: 11
                         }
                     ],
                     isActive: true
@@ -162,8 +167,8 @@ var lists = {
                     name: 'google',
                     links: [
                         {
-                            name: 'inbox',
-                            link: 'https://inbox.google.com',
+                            name: 'gmail',
+                            link: 'https://mail.google.com',
                             id: 1
                         },
                         {
