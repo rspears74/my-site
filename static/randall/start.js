@@ -322,7 +322,7 @@ var lists = {
                         },
                         {
                             name: 'digitalocean',
-                            link: 'https://cloud.digitalocean.com/projects/4b249cbf-95e4-4cab-ad3a-8fcdf2cd7e30/resources?i=1de60c'
+                            link: 'https://cloud.digitalocean.com/projects/4b249cbf-95e4-4cab-ad3a-8fcdf2cd7e30/resources?i=1de60c',
                             id: 5
                         }
                     ],
