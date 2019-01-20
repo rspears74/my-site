@@ -186,10 +186,15 @@ var lists = {
                             link: 'https://docs.google.com/spreadsheets/u/0/',
                             id: 5
                         },
+			{
+			    name: 'docs',
+			    link: 'https://docs.google.com/document/u/0/',
+			    id: 6
+			},
                         {
                             name: 'youtube',
                             link: 'https://www.youtube.com',
-                            id: 6
+                            id: 7
                         }
                     ],
                     isActive: false
@@ -312,7 +317,7 @@ var lists = {
                         },
                         {
                             name: 'digitalocean',
-                            link: 'https://cloud.digitalocean.com/dashboard?i=1de60c',
+                            link: 'https://cloud.digitalocean.com/projects/4b249cbf-95e4-4cab-ad3a-8fcdf2cd7e30/resources?i=1de60c'
                             id: 5
                         }
                     ],
